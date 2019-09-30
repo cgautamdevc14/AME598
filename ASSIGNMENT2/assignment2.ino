@@ -1,4 +1,6 @@
 #include <Arduino.h>
+#include <TTGO.h>
+TTGOClass *ttgo;
 
 
 char * HOSTNAME = "test12345678";
