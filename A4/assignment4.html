@@ -1,0 +1,45 @@
+<html>
+    <body>
+        <h1>Cloud ServerEg</h1>
+        <h3>Steps required</h3>
+            <ol>
+                <li>Sign into AWS account using SSH on your terminal and the pem key</li>
+                <li>In the terminal run the command git clone https://github.com/tejaswigowda/AME394Fall2019.git</li>
+                <li>From there use the command line cd AME394Fall2019/cloudServerEg</li>
+                <li>Run the node server utilizing node server.js</li>
+                <li>Once the server is running your can go back to your computer and out of the AWS Ubuntu machine and 
+                    run the upload the arudino code to connect to the AWS Server</li>
+            </ol>
+
+        <h3>Server Code</h3>
+        <p>The Node JS server has 3 courses '/' , '/getValue', and 'setValue ' and uses express, bodyparser, errorhandler and methodoverride 
+
+it complete the usefulness. The '/' course send the client to the index.html record to fill the contributions on that document. 
+
+the '/setValue' course disentangles the solicitation inquiry of both info esteems and sets the decoded qualities to VALUE1 and VALUE2 and afterward sends those 
+
+two factors as strings in the server. at last the '/getValue' sends the VALUE1 and VALUE2 factors over the server and 
+
+will be utilized for the watch to GET access to those factors.
+        </p>
+        <h3>Watch Code</h3>
+        <p>The watchCode.ino interfaces with the AWS web server at the course/getValue and sets the http strategy to variable called httpcode 
+
+. From that point it checks on the off chance that there is a httpcode getter than zero and, at that point sets the payload to the http toString. 
+
+From that point the watch code prints out the httpcode and the payload (the worth). on the off chance that the http under zero, at that point print that there 
+
+is a mistake
+        </p>
+        <h3>Public</h3>
+        <p>The public directory holds two files one asyncjs and index.html. asyncjs is a file that will give the 
+            html file asynchronous javascript functionality. The index.html is the front end for the webserver. It cotains
+            two input forms and a submit button. The Submit button calls the function SendDataToServer which calls the 
+            route /setValue and uses the two input forms to fill v1 and v2  of the setValue route and then doing a callback for the data.
+            from there it does a loadfile for the url and cb. 
+
+        </p>
+        <h2>Port Map</h2>
+        <p>The portMap.sh redirects to port 80</p>
+    </body>
+</html>
